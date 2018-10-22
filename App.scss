@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+@define-mixin main-font {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+}
+
+$accentColor : #00C19E;
+$primaryTypeColor : #121212;
+$secondaryTypeColor : #75787B;
+$secondaryColor : #BDBEC0;
+$secondaryTypeColor20per : rgba(117, 120, 123, 0.2);
+
+body {
+  background: #E9EAEC;
+}
+.app-container {
+  width: 450px;
+  min-height: 190px;
+  background: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  box-shadow: 4px 4px 0 $secondaryColor;
+  position: relative;
+  float: left;
+}
+.message {
+  color: $primaryTypeColor;
+  line-height: 1.35em;
+  width: 100%;
+  position: relative;
+  float: left;
+  margin-bottom: 20px;
+
+  .message-user {
+    color: $accentColor;
+    text-align: center;
+    height: 20px; 
+    width: 25px;
+    padding-top: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid $accentColor;
+  }
+  .message-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    float: left;
+  }
+  .message-section {
+    padding-left: 40px;
+    float: left;
+    display: inline-block;
+  }
+  .content-user {
+    font-weight: bold;
+    border-radius: 2px;
+    padding: 2px;
+    background: $secondaryTypeColor20per;
+  }
+  .message-date {
+    float: left;
+    color: $secondaryTypeColor;
+
+    .message-date-content {
+      font-size: 10px;
+    }
+    .pipe{
+      margin: 0 5px;
+    }
+  }
+  .message-content {
+    float: left;
+    width: 100%;
+  }
+}
+.button {
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 15px;
+
+  &.reply-button {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: $accentColor;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  } 
+}
+.input-container {
+  position: relative;
+  color: $secondaryTypeColor;
+
+  .message-input {
+    width: 355px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    padding-left: 40px;
+    font-size: 12px;
+  }
+  label {
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    opacity: .4;
+  }
+  label:before {
+      content: url(https://s3.amazonaws.com/bakery-assets.workframe.com/ui/resources/user-icon.svg);
+  }
+}
+.input-section {
+  float: left;
+  position: relative;
+  width: 100%;
+  padding-bottom: 60px;
+}
+.messages {
+  padding: 20px 20px 0;
+  float: left;
+}
